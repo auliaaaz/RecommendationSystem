@@ -50,11 +50,13 @@ This dataset features some distinctive characteristics:
 The first dataset that will be analyze is articles shared data. Because of there are some of data type in that data is categorical data, then some of that will be shown as visualization below.
 
 Figure 1
+
 ![Screenshot 2023-02-01 144941](https://user-images.githubusercontent.com/91725987/216051321-637ea64d-ddc1-4825-b16b-c2c5d5274a8d.jpg)
 
 As depicted in Figure 1, the value of 'content shared' is higher than that of 'content removed.' This is because 'content removed' refers to articles that are no longer available and thus have been dropped from the data, leaving only the available articles.
 
 Figure 2
+
 ![Screenshot 2023-02-01 145020](https://user-images.githubusercontent.com/91725987/216051375-1fdccb9a-aad9-460c-9ee6-a5ccec09e193.jpg)
 
 As depicted in Figure 2, the majority of articles are written in the English (en) and Portuguese (pt) languages, while the usage of other languages is rare. As a result, we will only consider English and Portuguese languages in the data.
@@ -62,6 +64,7 @@ As depicted in Figure 2, the majority of articles are written in the English (en
 Next, we move on to the second dataset, which is the user interaction data. Like the first dataset, some of the categorical data will be visualized.
 
 Figure 3
+
 ![Screenshot 2023-02-01 145222](https://user-images.githubusercontent.com/91725987/216051407-b5f9d58e-d1d7-4ac2-8c51-585307966e26.jpg)
 
 As depicted in Figure 3, the most common type of user interaction is 'View', which means that users interact by viewing articles. Since there are 5 types of interactions, they will be scored based on the user's level of interaction with the data and assigned to a new column (eventStrength). The score represents the strength of the interaction, with 1 representing the weakest interaction (View) and 4 representing the strongest interaction (1: View, 2: Like, 3: Bookmark, 4: Comment Created).
@@ -76,7 +79,7 @@ The project utilizes a content-based filtering model for making article recommen
 
 In this project, the cosine similarity method is used for the content-based filtering. This method measures the similarity between two sequences, in this case the 'user-item matrix' and the 'item-item matrix' (which is the transpose of the user-item matrix), using the 'eventStrength' to represent the interactions between a user and an article. The 'eventStrength' represents the mean value of the interactions between a person and the content they interacted with. The formula for the cosine similarity is shown below.
 
-$$ CosineSimilarity(A, B) =  ((A * B) \over (||A|| * ||B||) $$
+$$ CosineSimilarity(A, B) =  {(A * B) \over (||A|| * ||B||} $$
 
 Where:
 
