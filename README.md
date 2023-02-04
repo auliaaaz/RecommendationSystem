@@ -1,4 +1,4 @@
-# Machine Learning Project Report - Andi Aulia Syahnur
+# Report
 
 ## Project Overview
 
