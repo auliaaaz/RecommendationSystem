@@ -76,7 +76,7 @@ The project utilizes a content-based filtering model for making article recommen
 
 In this project, the cosine similarity method is used for the content-based filtering. This method measures the similarity between two sequences, in this case the 'user-item matrix' and the 'item-item matrix' (which is the transpose of the user-item matrix), using the 'eventStrength' to represent the interactions between a user and an article. The 'eventStrength' represents the mean value of the interactions between a person and the content they interacted with. The formula for the cosine similarity is shown below.
 
-$$ CosineSimilarity(A, B) =  ((A * B) \over (||A|| * ||B||)
+$$ CosineSimilarity(A, B) =  ((A * B) \over (||A|| * ||B||) $$
 
 Where:
 
